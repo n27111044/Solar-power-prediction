@@ -1,0 +1,16 @@
+// Feature Selection Process
+digraph {
+	A [label="Data Preprocessing" color=lightblue fontname="Times-Roman" fontsize=14 shape=box style=filled]
+	B [label="Boruta Feature Selection" color=lightgreen fontname="Times-Roman" fontsize=14 shape=box style=filled]
+	C [label="Pearson Correlation Coefficient" color=lightgreen fontname="Times-Roman" fontsize=14 shape=box style=filled]
+	D [label="Mutual Information" color=lightgreen fontname="Times-Roman" fontsize=14 shape=box style=filled]
+	E [label="Intersection of Selected Features" color=yellow fontname="Times-Roman" fontsize=14 shape=ellipse style=filled]
+	F [label="Final Selected Features" color=lightcoral fontname="Times-Roman" fontsize=14 shape=box style=filled]
+	A -> B [fontname="Times-Roman" fontsize=12 style=dashed]
+	A -> C [label=" Step_1" fontname="Times-Roman" fontsize=12 style=dashed]
+	A -> D [fontname="Times-Roman" fontsize=12 style=dashed]
+	B -> E [fontname="Times-Roman" fontsize=12]
+	C -> E [label=" Step_2" fontname="Times-Roman" fontsize=12]
+	D -> E [fontname="Times-Roman" fontsize=12]
+	E -> F [label=" Step_3" fontname="Times-Roman" fontsize=12 style=bold]
+}
